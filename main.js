@@ -106,3 +106,8 @@ function ej4()
 {
 	document.getElementById("instrucciones").innerHTML= "16 0 0 0\nJ( 1,4,9)\nS(3)\nJ(1, 3, 7)\nS(2)\nS(3)\nJ(1,1,3)\nT(2,1)" ;
 }
+function borrar()
+{
+	document.getElementById("vaciado").innerHTML="";
+	document.getElementById("instrucciones").innerHTML="";
+}
