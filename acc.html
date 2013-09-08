@@ -17,9 +17,70 @@
   $(function() {
     $( "#accordion" ).accordion({
       heightStyle: "content",
-	  collapsible: true
+	  collapsible: true,
+	  event: "click hoverintent"
     });
   });
+  $.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+ 
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+ 
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+ 
+      function handler() {
+        var prop,
+          orig = event;
+ 
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+ 
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          // Prevent accessing the original event since the new event
+          // is fired asynchronously and the old event is no longer
+          // usable (#6028)
+          delete event.originalEvent;
+ 
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+ 
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };
   </script>
 </head>
 <body>
@@ -51,7 +112,8 @@
     <p>Este compilador soporta las instrucciones Z S T J</p>
     <p> En caso de introducir otra, el programa dejará de compilar</p>
     <p>El programa ignora espacios y carateres de más, incluso argumentos</p>
-    <p>T(n,m) puede ser escrita como:   Tn,m  T(((((n,     m)    Tn,m)</p>
+    <p>T(<b>n</b>,<b>m</b>) puede ser escrita como:   T<b>n</b>,<b>m</b> T(((((<b>n</b>,    <b>m</b>)    T<b>n</b>,  <b>m</b>) o incluso T asdsad<b>n</b>dsadas,dasdas<b>m</b>dasds</p>
+	<p>Tampoco importa que se introduzcan argumentos extras, la función Z(<b>m</b>) puede ser escrita como:  Z(<b>n</b>,<b>m</b>,<b>p</b>,<b>q</b>) y solo se tomará el primer argumento</p>
     <p> La única restricción es que la letra de la instrucción debe ser mayúscula y no debe haber líneas en blanco</p>
   </div>
   <h3>Programa</h3>
