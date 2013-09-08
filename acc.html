@@ -16,16 +16,20 @@
   <script>
   $(function() {
     $( "#accordion" ).accordion({
-      heightStyle: "content"
+      heightStyle: "content",
+	  collapsible: true
     });
   });
   </script>
 </head>
 <body>
+
  <div class="col-lg-6">
+
             <h1>URM</h1>
+			
             <p class="lead">Unlimited Register Machine</p>
-          </div>
+          </div> 
 		  <hr>
 <div id="accordion">
   <h3>Teoria</h3>
@@ -34,7 +38,12 @@
     	<h4>Unlimited Register Machine</h1>
     		<p>Es una máquina teórica</p>
     		<p> Se asume que si una función se puede calcular en este sistema básico</p>
-    		<p>entonces es una función computable</p>
+    		<p>entonces es una función computable.</p>
+			<p> La compuradora posee registros ilimitados  sobre  los cuales se pueden realizar cuatro operaciones Básicas:</p>
+			<p>T</p>
+			<p>Z</p>
+			<p>J</p>
+			<p>S</p>
     </center>
   </div>
   <h3>Manual</h3>
@@ -61,14 +70,23 @@
 		<textarea id="vaciado" name="vaciado" rows="10" cols="25"></textarea>
 		</div>
 		<div align="center">
-		<div class="btn-group" style="align:bottom;">
+		<div class="btn-group">
 		<input type="button" name="boton" id="boton" class="btn btn-primary" value="Compilar" onclick="aler()"/>
 		<input type="button" name="borrar"id="borrar" class="btn btn-danger" value="Reiniciar" onclick="borrar()" />
 		</div>
 		</div>
   </div>
 </div>
+<br>
+<hr>
+<div align="center"> <img src="ilustracion.png" ></div>
  
- 
+ <div id="footer">
+ <hr>
+ <p class="text-center"> Espinosa Tinoco Adam Jacobo</p>
+<p class="text-center">Teoría de la Computación</p>
+<p class="text-center">2013</p>
+</div>
+
 </body>
 </html>
