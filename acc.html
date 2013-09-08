@@ -1,0 +1,62 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Simulador URM</title>
+  <script type="text/javascript" src="main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="URM COMPILER">
+	<meta name="author" content="Adam Jacobo Espinosa Tinoco">
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="jquery/jquery-ui.css" />  
+  <script src="jquery/jquery-1.9.1.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
+  </script>
+</head>
+<body>
+ <div class="col-lg-6">
+            <h1>URM</h1>
+            <p class="lead">Unlimited Register Machine</p>
+          </div>
+		  <hr>
+<div id="accordion">
+  <h3>Teoria</h3>
+  <div>
+    <center>
+    	<h4>Unlimited Register Machine</h1>
+    		<p>Es una máquina teórica</p>
+    </center>
+  </div>
+  <h3>Manual</h3>
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+  </div>
+  <h3>Programa</h3>
+  <div>
+    <div align="center">
+		  <div class="btn-group">
+		<button class="btn btn-warning" onclick="ej1()">Medio</button>
+		<button class="btn btn-warning" onclick="ej2()">Suma</button>
+		<button class="btn btn-warning" onclick="ej3()">Doble</button>
+		<button class="btn btn-warning" onclick="ej4()">Pedecesor</button>
+		</div>
+		</div>
+		<div align="center">
+		<textarea id="instrucciones" name="instrucciones" rows="25" cols="40"></textarea>
+		<input type="button" name="boton" id="boton" class="btn btn-primary" value="Compilar" onclick="aler()"/>
+		<textarea id="vaciado" name="vaciado" rows="25" cols="40"></textarea>
+		</div>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
