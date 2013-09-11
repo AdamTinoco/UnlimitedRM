@@ -1,5 +1,6 @@
+borrar();
 function aler()
-{
+{	
 	var instrucciones = document.getElementById("instrucciones").value;
 	var instrucciones=instrucciones.split("\n");
 	var confInicial= instrucciones[0];
@@ -9,7 +10,7 @@ function aler()
 	confInicial.unshift(0);
 	var arg1, arg2, arg3, outOf=999999999999999999999;
 	for (k=1;k<confInicial.length;k++)
-		vaciado.innerHTML += confInicial[k]+ " ";
+		vaciado.innerHTML += confInicial[k] + " ";
 	var i=1;
 	while(i<instrucciones.length)
 	{
@@ -92,22 +93,26 @@ function aler()
 }
 function ej1()
 {
+	borrar();
 	document.getElementById("instrucciones").innerHTML= "4 0 0\nJ(1,2,6),\nS3\nS(2                    )\nS(2)  comentarios\nJ1,    1,   1)\nT(3,1)" ;
 }
 function ej2()
-{
+{	
+	borrar();
 	document.getElementById("instrucciones").innerHTML= "9 17 0\nJ3,2,             5\nS1\nS(3)\nJ(1,1,1)" ;
 }
 function ej3()
-{
+{	
+	borrar();
 	document.getElementById("instrucciones").innerHTML= "5 0 0\nT(1,2)\nJ( 2,3,6)\nS(1)\nS(3)\nJ(1, 1, 2)" ;
 }
 function ej4()
 {
-	document.getElementById("instrucciones").innerHTML= "16 0 0 0\nJ( 1,4,9)\nS(3)\nJ(1, 3, 7)\nS(2)\nS(3)\nJ(1,1,3)\nT(2,1)" ;
+	borrar();
+	document.getElementById("instrucciones").innerHTML+= "16 0 0 0\nJ( 1,4,9)\nS(3)\nJ(1, 3, 7)\nS(2)\nS(3)\nJ(1,1,3)\nT(2,1)" ;
 }
 function borrar()
 {
-	document.getElementById("vaciado").innerHTML="";
 	document.getElementById("instrucciones").innerHTML="";
+	document.getElementById("vaciado").innerHTML="";
 }

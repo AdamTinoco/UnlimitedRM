@@ -101,10 +101,19 @@
     		<p> Se asume que si una función se puede calcular en este sistema básico</p>
     		<p>entonces es una función computable.</p>
 			<p> La compuradora posee registros ilimitados  sobre  los cuales se pueden realizar cuatro operaciones Básicas:</p>
-			<p>T</p>
-			<p>Z</p>
-			<p>J</p>
-			<p>S</p>
+			<br/>
+			<p>T: 		Encargada de transferir lo 	que se encuentre en la celda m al destino de n</p>
+			<p><img src="img/Tmn.jpg" /></p>
+			<p>Z:		Es aquella que toma un registro y reemplaza su contenido con un cero</p>
+			<p><img src="img/ZN.jpg"</p>
+			<p>S:		Realiza un incremento en una unidada en la celda especificada</p>
+			<p><img src="img/Sn.jpg" /> </p>
+			<p>J:		Se encarga de realizar una comparación entre dos registros, si su contenido es idéntico, saltará a</p>			<p>			la instrucción correspondiente</p>
+			<p><img src="img/jnmp.jpg" /></p>
+			<p>En este ejemplo se observa que los registros especificados son idénticos, por lo tanto saltará a la </p>
+			<p> instrucción número dos, que indica aplicar la función suma al registro 3</p>
+			<p>aunque este ejemplo pareza redundante, ya que de no cumplirse de todas maneras saltaría a la instrucción siguiente</p>
+			<p>es meramente ilustrativo.</p>
     </center>
   </div>
   <h3>Manual</h3>
@@ -113,8 +122,10 @@
     <p> En caso de introducir otra, el programa dejará de compilar</p>
     <p>El programa ignora espacios y carateres de más, incluso argumentos</p>
     <p>T(<b>n</b>,<b>m</b>) puede ser escrita como:   T<b>n</b>,<b>m</b> T(((((<b>n</b>,    <b>m</b>)    T<b>n</b>,  <b>m</b>) o incluso T asdsad<b>n</b>dsadas,dasdas<b>m</b>dasds</p>
-	<p>Tampoco importa que se introduzcan argumentos extras, la función Z(<b>m</b>) puede ser escrita como:  Z(<b>n</b>,<b>m</b>,<b>p</b>,<b>q</b>) y solo se tomará el primer argumento</p>
+	<p>También la función Z(<b>m</b>) puede ser escrita como:  Z(<b>n</b>,<b>m</b>,<b>p</b>,<b>q</b>) y solo se tomará el primer argumento</p>
     <p> La única restricción es que la letra de la instrucción debe ser mayúscula y no debe haber líneas en blanco</p>
+    <p>Formato de entrada:</p>
+    <p>La primera línea contendrá la inicialización de los registros, separados por espacios a partir del primer elemento</p>
   </div>
   <h3>Programa</h3>
   <div>
@@ -138,7 +149,22 @@
 		</div>
 		</div>
   </div>
+  <h3>Justificación</h3>
+<div>
+		<div align="center">
+			<p> Este programa se encuetra escrito en lenguaje JavaScript</p>
+			<p> Se eligió tal por su potencia de procesamiento y su flexibilidad, ya que no es necesario instalar </p>
+			<p>algún complemento, lo único que se requiere es un explorador web, y cualquier dispositivo</p>
+			<p> con acceso a internet podrá visualizarlo, además el desarrollo web facilita y mejora la visualización</p>
+			<p>dándole un aspecto más agradable</p>
+			<p><strong>Nota:</strong> Este desarrollo no tiene nada que ver con el ejemplo encontrado en internet</p>
+			<p>se puede encontrar <a  href="http://faculty.oxy.edu/rnaimi/home/URMsim.htm">aquí</a></p>
+			<p>y el código fuente de éste proyecto se puede encontrar <a href="www.facebook.com">aquí</a></p>
+			
+		</div>
 </div>
+</div>
+
 <br>
 <hr>
 <div align="center"> <img src="ilustracion.png" ></div>
