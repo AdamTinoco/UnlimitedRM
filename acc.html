@@ -118,14 +118,26 @@
   </div>
   <h3>Manual</h3>
   <div>
-    <p>Este compilador soporta las instrucciones Z S T J</p>
-    <p> En caso de introducir otra, el programa dejará de compilar</p>
-    <p>El programa ignora espacios y carateres de más, incluso argumentos</p>
-    <p>T(<b>n</b>,<b>m</b>) puede ser escrita como:   T<b>n</b>,<b>m</b> T(((((<b>n</b>,    <b>m</b>)    T<b>n</b>,  <b>m</b>) o incluso T asdsad<b>n</b>dsadas,dasdas<b>m</b>dasds</p>
-	<p>También la función Z(<b>m</b>) puede ser escrita como:  Z(<b>n</b>,<b>m</b>,<b>p</b>,<b>q</b>) y solo se tomará el primer argumento</p>
-    <p> La única restricción es que la letra de la instrucción debe ser mayúscula y no debe haber líneas en blanco</p>
+  	<div align="center">
     <p>Formato de entrada:</p>
     <p>La primera línea contendrá la inicialización de los registros, separados por espacios a partir del primer elemento</p>
+    <p><b>procura evitar dejar un espacio antes de colocar el primer registro, el programa producirá resultados incorrectos</b></p>
+    <p>Todas las demás corresponderán a las instrucciones del programa</p>
+    <p>Este compilador soporta las instrucciones Z S T J</p>
+    <p>En caso de introducir otra o colocarla en con letra minúscula, el programa dejará de compilar</p>
+    <p>En caso de introducir saltos de línea o líneas en blanco, el programa arrojará un error.</p>
+    <p>El programa ignora espacios y carateres de más, incluso argumentos</p>
+    <p>T(<b>n</b>,<b>m</b>) puede ser escrita como:   T<b>n</b>,<b>m</b> T(((((<b>n</b>,    <b>m</b>)    T<b>n</b>,  <b>m</b>) o incluso T asdsad<b>n</b>dsadas,dasdas<b>m</b>dasds</p>
+	<p>También la función Z(<b>m</b>) puede ser escrita como:  Z(<b>n</b>,<b>m</b>,<b>p</b>,<b>q</b>) y solo se tomará el primer número </p>
+	<p>encontrado de izquierda a derecha</p>
+	<p>Se puede aplicar la operación Suma a un registro que no se halla declarado al inicio</p>
+	<p>Se puede utilizar la función Transferir de un registro inicializado a uno inexistente.</p>
+	<p>En caso contrario, el programa dejará de compilar.</p>
+	<p>Al utilizar la función J(<b>n</b>,<b>m</b>,<b>p</b>) se debe procurar que tanto <b>n</b> como <b>m</b></p>
+	<p>hayan sido inicializados de lo contrario se mostrará un lenguaje de error y dejará de compilar.</p>
+    <p>Esta página clasifica la infomación en pestañas, solo necesitas pasar el mouse para navegar entre ellas</p>
+    <p>Puedes minimizarla solo con volver a pasa el mouse sobre la pestaña activa o posicionándote sobre otra.</p>
+    </div>
   </div>
   <h3>Programa</h3>
   <div>
@@ -159,7 +171,7 @@
 			<p>dándole un aspecto más agradable</p>
 			<p><strong>Nota:</strong> Este desarrollo no tiene nada que ver con el ejemplo encontrado en internet</p>
 			<p>se puede encontrar <a  href="http://faculty.oxy.edu/rnaimi/home/URMsim.htm">aquí</a></p>
-			<p>y el código fuente de éste proyecto se puede encontrar <a href="www.facebook.com">aquí</a></p>
+			<p>y el código fuente de éste proyecto se puede encontrar <a href="https://raw.github.com/AdamTinoco/UnlimitedRM/master/main.js">aquí</a></p>
 			
 		</div>
 </div>
