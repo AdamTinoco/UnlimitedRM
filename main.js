@@ -81,16 +81,16 @@ function aler()
 						i++;														// de lo contrario continuará con la ejecución del programa
 				}	
 			break;
-			i++;
+			i++;																	//incremento necesario para permitir múltiples argumentos aunque el programador no pueda explicarlo
 			default:
 			alert("instruccion inexistente en la linea: "+ i  +" \nFunciones definidas: Z S T J\nTerminando Ejecucion [0x3249234]");
-			i=outOf;
+			i=outOf;							//manejo de excepción en caso de introducir algún caracter no válido o en minúsculas.
 			break;	
 		}		
 	}
 
 }
-function ej1()
+function ej1()										//las siguientes líneas sólo muesstran en pantalla los ejemplos
 {
 	borrar();
 	document.getElementById("instrucciones").innerHTML= "4 0 0\nJ(1,2,6),\nS3\nS(2                    )\nS(2)  comentarios\nJ1,    1,   1)\nT(3,1)" ;
@@ -110,7 +110,7 @@ function ej4()
 	borrar();
 	document.getElementById("instrucciones").innerHTML+= "16 0 0 0\nJ( 1,4,9)\nS(3)\nJ(1, 3, 7)\nS(2)\nS(3)\nJ(1,1,3)\nT(2,1)" ;
 }
-function borrar()
+function borrar()									//vaciía los cuadros de texto para que puedan ser otra vez utilizados
 {
 	document.getElementById("instrucciones").innerHTML="";
 	document.getElementById("vaciado").innerHTML="";
