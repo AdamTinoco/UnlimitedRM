@@ -110,8 +110,8 @@ function ej4()
 	borrar();
 	document.getElementById("instrucciones").innerHTML+= "16 0 0 0\nJ( 1,4,9)\nS(3)\nJ(1, 3, 7)\nS(2)\nS(3)\nJ(1,1,3)\nT(2,1)" ;
 }
-function borrar()									//vaciía los cuadros de texto para que puedan ser otra vez utilizados
-{
+function borrar() {
+
 	document.getElementById("instrucciones").innerHTML="";
 	document.getElementById("vaciado").innerHTML="";
 }
