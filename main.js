@@ -110,6 +110,11 @@ function ej4()
 	borrar();
 	document.getElementById("instrucciones").innerHTML+= "16 0 0 0\nJ( 1,4,9)\nS(3)\nJ(1, 3, 7)\nS(2)\nS(3)\nJ(1,1,3)\nT(2,1)" ;
 }
+function ej5()
+{
+	borrar();
+	document.getElementById("instrucciones").innerHTML="4 3 0 0 1\nT(1,3)\nJ(1,4,6)\nS(3)\nS(4)\nJ(1,1,2)\nS(5)\nZ(4)\nJ(2,5,10)\nJ(1,1,2)\nT(3,1)";
+}
 function borrar() {
 
 	document.getElementById("instrucciones").innerHTML="";
